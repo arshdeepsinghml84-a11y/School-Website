@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1565C0"/>
+      <stop offset="100%" stop-color="#42A5F5"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200.0" cy="152.0" r="64.0" fill="#ffffff" fill-opacity="0.92"/>
+  <path d="M 72.0 368.0 C 72.0 264.0 128.0 220.00000000000003 200.0 220.00000000000003 C 272.0 220.00000000000003 328.0 264.0 328.0 368.0 Z" fill="#ffffff" fill-opacity="0.92"/>
+  <text x="50%" y="97%" font-family="Poppins, Arial, sans-serif" font-size="36.0" font-weight="700" fill="#ffffff" text-anchor="middle">VR</text>
+</svg>

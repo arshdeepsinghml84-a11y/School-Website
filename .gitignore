@@ -1,0 +1,17 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Editor settings (personal to each developer)
+.vscode/
+
+# Logs
+*.log
+
+# Secrets - this project does not use any yet, but never commit them
+.env
+.env.*
+!.env.example
+
+# Dependencies - only appears if you add npm packages later
+node_modules/

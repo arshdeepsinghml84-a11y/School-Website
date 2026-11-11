@@ -1,0 +1,139 @@
+/* ====================================================================
+   RIVERSTONE ACADEMY — RESPONSIVE STYLESHEET
+   Breakpoints (mobile-first overrides on top of style.css):
+   - ≤ 1199px  Laptop / small desktop
+   - ≤ 991px   Tablet
+   - ≤ 767px   Mobile landscape
+   - ≤ 575px   Mobile portrait
+   - ≤ 380px   Small phones
+   ==================================================================== */
+
+/* ==================== LAPTOP (≤ 1199px) ==================== */
+@media (max-width: 1199px) {
+  :root { --container-width: 992px; }
+
+  .hero-title { font-size: clamp(2rem, 4.4vw, 3.1rem); }
+  .stats-grid { gap: 1.4rem; }
+}
+
+/* ==================== TABLET (≤ 991px) ==================== */
+@media (max-width: 991px) {
+  section { padding: 4rem 0; }
+
+  h2 { font-size: clamp(1.6rem, 4vw, 2.1rem); }
+
+  .hero { min-height: 92vh; }
+  .hero-desc { font-size: 0.98rem; }
+
+  .about-grid { grid-template-columns: 1fr; }
+  .about-media { max-width: 480px; margin: 0 auto; }
+  .about-media-badge { right: 1rem; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form { order: -1; }
+
+  .timeline { grid-template-columns: repeat(2, 1fr) !important; }
+  .timeline::before { display: none; }
+
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==================== MOBILE LANDSCAPE (≤ 767px) ==================== */
+@media (max-width: 767px) {
+  :root { --header-height: 72px; }
+
+  .container { padding: 0 18px; }
+  section { padding: 3.2rem 0; }
+
+  .section-head { margin-bottom: 2rem; }
+
+  /* Hero adjustments */
+  .hero-title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+  .hero-desc { max-width: 100%; }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+  .hero-float { display: none; } /* reduce visual noise on small screens */
+
+  /* Stats: two per row already handled in style.css at default */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Why choose / academics / facilities collapse to single/two columns */
+  .why-grid,
+  .academics-grid,
+  .achievements-grid,
+  .news-grid { grid-template-columns: 1fr; }
+
+  .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .teachers-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .events-grid { grid-template-columns: 1fr; }
+
+  .gallery-grid { columns: 2; }
+
+  .timeline { grid-template-columns: 1fr !important; }
+  .timeline-step { display: flex; gap: 1rem; text-align: left; align-items: flex-start; }
+  .timeline-marker { margin-bottom: 0; flex-shrink: 0; }
+
+  .testimonial-card { padding: 1.8rem 1.4rem; }
+
+  .newsletter-inner { flex-direction: column; align-items: flex-start; }
+  .newsletter-form { width: 100%; }
+  .newsletter-form input { flex: 1; min-width: 0; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-brand { grid-column: 1 / -1; }
+
+  .lightbox-prev, .lightbox-next { width: 40px; height: 40px; font-size: 1.3rem; }
+}
+
+/* ==================== MOBILE PORTRAIT (≤ 575px) ==================== */
+@media (max-width: 575px) {
+  .brand-sub { display: none; } /* keep header compact */
+
+  .btn { padding: 0.78em 1.4em; font-size: 0.88rem; }
+  .btn-lg { padding: 0.9em 1.7em; }
+
+  .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+  .teachers-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+  .gallery-grid { columns: 1; }
+
+  .gallery-filters { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 0.4rem; }
+  .filter-btn { flex-shrink: 0; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+
+  .contact-form { padding: 1.5rem; }
+
+  .about-media-badge { position: static; margin-top: 1rem; width: fit-content; }
+
+  .back-to-top { right: 16px; bottom: 16px; width: 44px; height: 44px; }
+}
+
+/* ==================== SMALL PHONES (≤ 380px) ==================== */
+@media (max-width: 380px) {
+  .hero-title { font-size: 1.6rem; }
+  .stat-number { font-size: 1.6rem; }
+  .nav-list { padding: 1rem 18px 1.4rem; }
+  .newsletter-form input { min-width: 0; width: 100%; }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+  .site-header, .hamburger, .back-to-top, .newsletter-section,
+  .lightbox, #preloader, .hero-shape, .hero-float { display: none !important; }
+  body { background: #fff; color: #000; }
+  section { padding: 1.2rem 0; }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
